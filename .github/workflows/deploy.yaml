@@ -39,7 +39,6 @@ jobs:
       - name: Setup Python
         #uses a github action to install python
         uses: actions/setup-python@v4.5.0
-        #optional with param for specific python version
         with:
           python-version: "3.9"
       #third step - install make
