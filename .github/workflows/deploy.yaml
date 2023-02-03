@@ -1,6 +1,6 @@
 #name of workflow
 name: deploy-lambda
-#trigger (object)
+#triggers (object)
 on:
   #event (object)
   push:
