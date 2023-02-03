@@ -8,12 +8,12 @@ on:
     branches:
       - main
     #event for manual triggers, accessable in github console
-    workflow_dispatch:
-      inputs:
-        environment:
-          type: string
-          default: dev
-          required: false
+    # workflow_dispatch:
+    #   inputs:
+    #     environment:
+    #       type: string
+    #       default: dev
+    #       required: false
 
 #workflow jobs
 jobs:
