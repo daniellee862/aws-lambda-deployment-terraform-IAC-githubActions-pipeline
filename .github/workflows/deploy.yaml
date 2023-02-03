@@ -5,12 +5,12 @@ on:
     branches:
       - main
 
-work_dispatch:
-  inputs:
-    environment:
-      type: string
-      default: dev
-      required: false
+    workflow_dispatch:
+      inputs:
+        environment:
+          type: string
+          default: dev
+          required: false
 
 jobs:
   say-hello:
