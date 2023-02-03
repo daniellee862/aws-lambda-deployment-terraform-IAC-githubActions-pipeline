@@ -1,0 +1,20 @@
+name: deploy-lambda
+
+on:
+  push:
+    branches:
+      - main
+
+work_dispatch:
+  inputs:
+    environment:
+      type: string
+      default: dev
+      required: false
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greet-user
+        run: echo 'Hello Everybody!'
