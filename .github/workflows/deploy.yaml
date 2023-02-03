@@ -93,4 +93,4 @@ jobs:
       - name: Terraform Apply
         working-directory: ./terraform
         id: apply
-        run: terraform apply -no-color -input=false
+        run: terraform apply
