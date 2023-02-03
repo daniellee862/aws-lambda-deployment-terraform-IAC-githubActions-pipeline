@@ -44,7 +44,7 @@ jobs:
       #third step - install make
       - name: install make
         #uses a terminal command
-        uses: sudo apt install make -y
+        run: sudo apt install make -y
       #fouth step - install Requirments
       - name: Install Requirements
         #uses make file to install dependancies
