@@ -29,37 +29,37 @@ jobs:
         run: echo 'Hello Everybody!'
 
   #second job
-  run-checks:
-  runs-on: ubuntu-latest
-  steps:
-    #first step - action from github marketplace actions
-    - name: Checkout
-      uses: actions/checkout@v3.3.0
+  run-setup-and-checks:
+    runs-on: ubuntu-latest
+    steps:
+      #first step - action from github marketplace actions
+      - name: Checkout
+        uses: actions/checkout@v3.3.0
 
-    #second-step-install python
-    - name: Setup Python
-      #uses a github action to install python
-      uses: actions/setup-python@v4.5.0
-      #optional with param for specific python version
-      with:
-        python-version: "3.9"
+      #second-step-install python
+      - name: Setup Python
+        #uses a github action to install python
+        uses: actions/setup-python@v4.5.0
+        #optional with param for specific python version
+        with:
+          python-version: "3.9"
 
-    #third step - install make
-    - name: install make
-      #uses a terminal command
-      uses: sudo apt install make -y
+      #third step - install make
+      - name: install make
+        #uses a terminal command
+        uses: sudo apt install make -y
 
-    #fouth step - install Requirments
-    - name: Install Requirements
-      #uses make file to install dependancies
-      run: make requirements
+      #fouth step - install Requirments
+      - name: Install Requirements
+        #uses make file to install dependancies
+        run: make requirements
 
-    #fith step - setup dev requirements
-    - name: Setup Dev Requirements
-      #runs dev-setup that is in make file
-      run: make dev-setup
+      #fith step - setup dev requirements
+      - name: Setup Dev Requirements
+        #runs dev-setup that is in make file
+        run: make dev-setup
 
-      #fith step - Run System Checks
-    - name: Run System Checks
-      #runs run-checks that is in make file
-      run: make run-checks
+        #fith step - Run System Checks
+      - name: Run System Checks
+        #runs run-checks that is in make file
+        run: make run-checks
