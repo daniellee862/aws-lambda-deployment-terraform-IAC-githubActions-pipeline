@@ -58,7 +58,7 @@ jobs:
         #runs run-checks that is in make file
         run: make run-checks
 
-  #third jobs
+  #third jobss
   deploy-lambda:
     needs: run-setup-and-checks
     runs-on: ubuntu-latest
